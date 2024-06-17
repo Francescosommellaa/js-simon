@@ -13,7 +13,7 @@ for (let i = 0; i < 5; i++) {
 setTimeout(function() {
     document.getElementById('randomNumbers').style.display = 'none';
     document.getElementById('userInputs').style.display = 'block';
-}, 2000);
+}, 20000);
 
 // Aggiungi un evento di click al pulsante per invocare la funzione checkNumbers
 document.getElementById('submit').addEventListener('click', function() {
