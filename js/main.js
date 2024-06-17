@@ -42,3 +42,9 @@ function checkNumbers() {
         document.getElementById('result').innerHTML = 'Hai perso!';
     }
 }
+
+// click al pulsante per la funzione checkNumbers
+document.getElementById('submit').addEventListener('click', 
+    checkNumbers
+);
+
