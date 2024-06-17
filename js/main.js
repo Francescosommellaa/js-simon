@@ -2,7 +2,7 @@
 let randomNumbers = [];
 
 // Genera 5 numeri casuali da 1 a 100
-for (var i = 0; i < 5; i++) {
+for (let i = 0; i < 5; i++) {
     // Genera un numero casuale e lo aggiunge all'array
     randomNumbers[i] = Math.floor(Math.random() * 100) + 1;
     // Visualizza il numero casuale nella pagina web
@@ -18,12 +18,12 @@ setTimeout(function() {
 // Funzione per controllare i numeri inseriti dall'utente
 function checkNumbers() {
     // Inizializza un contatore per i numeri corretti
-    var correctNumbers = 0;
+    let correctNumbers = 0;
 
     // Controlla ciascuno dei 5 numeri inseriti dall'utente
-    for (var i = 0; i < 5; i++) {
+    for (let i = 0; i < 5; i++) {
         // Ottiene il numero inserito dall'utente
-        var userInput = document.getElementById('num' + (i + 1)).value;
+        let userInput = document.getElementById('num' + (i + 1)).value;
 
         // Se il numero inserito dall'utente è uguale al numero casuale, colora la casella di verde e incrementa il contatore
         if (userInput == randomNumbers[i]) {
