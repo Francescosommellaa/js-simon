@@ -6,7 +6,7 @@ for (let i = 0; i < 5; i++) {
     // Genera un numero casuale e lo aggiunge all'array
     randomNumbers[i] = Math.floor(Math.random() * 100) + 1;
     // Visualizza il numero casuale nella pagina web
-    document.getElementById('randomNumbers').innerHTML += randomNumbers[i] + ' ';
+    document.getElementById('randomNumbers').innerHTML += randomNumbers[i]+ ' ';
 }
 
 // Dopo 20 secondi, nasconde i numeri casuali e mostra le caselle di input
@@ -15,25 +15,10 @@ setTimeout(function() {
     document.getElementById('userInputs').style.display = 'block';
 }, 20000);
 
-// Funzione per controllare i numeri inseriti dall'utente
-function checkNumbers() {
-    // Inizializza un contatore per i numeri corretti
-    let correctNumbers = 0;
-
-    // Controlla ciascuno dei 5 numeri inseriti dall'utente
-    for (let i = 0; i < 5; i++) {
-        // Ottiene il numero inserito dall'utente
-        let userInput = document.getElementById('num' + (i + 1)).value;
-
-        // Se il numero inserito dall'utente è uguale al numero casuale, colora la casella di verde e incrementa il contatore
-        if (userInput == randomNumbers[i]) {
-            document.getElementById('num' + (i + 1)).className = 'correct';
-            correctNumbers++;
-        } else {
-            // Se il numero inserito dall'utente non è uguale al numero casuale, colora la casella di rosso
-            document.getElementById('num' + (i + 1)).className = 'incorrect';
-        }
-    }
+// Aggiungi un evento di click al pulsante per invocare la funzione checkNumbers
+document.getElementById('submit').addEventListener('click', function() {
+    let inputIds = ['num1', 'num2', 'num3', 'num4', 'num5'];
+    let correctNumbers = checkNumbers(randomNumbers, inputIds);
 
     // Se l'utente ha indovinato almeno 3 numeri, visualizza un messaggio di vittoria, altrimenti un messaggio di sconfitta
     if (correctNumbers >= 3) {
@@ -41,10 +26,4 @@ function checkNumbers() {
     } else {
         document.getElementById('result').innerHTML = 'Hai perso!';
     }
-}
-
-// click al pulsante per la funzione checkNumbers
-document.getElementById('submit').addEventListener('click', 
-    checkNumbers
-);
-
+});
