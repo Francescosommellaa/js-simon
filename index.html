@@ -10,28 +10,41 @@
 </head>
 <body>
 
-    <div>
+    <div class="container">
 
-        <div>
+        <div class="title">
             <h1>SIMON</h1>
-            <P></P>
         </div>
 
-        <!-- numeri casuali -->
-        <div id="randomNumbers"></div>
+        <div class="num-container">
 
-        <!-- numeri dell'utente -->
-        <div id="userInputs">
-            <input type="number" id="num1" min="1" max="100">
-            <input type="number" id="num2" min="1" max="100">
-            <input type="number" id="num3" min="1" max="100">
-            <input type="number" id="num4" min="1" max="100">
-            <input type="number" id="num5" min="1" max="100">
-            <button id="submit">Invia</button>
+            <h2>Sfida la tua memoria: Ricorda e Ripeti i Numeri!</h2>
+
+            <!-- numeri casuali -->
+            <div id="randomNumbers"></div>
+
+            <!-- numeri dell'utente -->
+            <div id="userInputs">
+                <input type="number" class="nem" id="num1" min="1" max="100">
+                <input type="number" class="nem" id="num2" min="1" max="100">
+                <input type="number" class="nem" id="num3" min="1" max="100">
+                <input type="number" class="nem" id="num4" min="1" max="100">
+                <input type="number" class="nem" id="num5" min="1" max="100">
+                <button id="submit">Invia</button>
+            </div>
+
+            <div id="result"></div>
+
         </div>
-        
-        <div id="result"></div>
+
+
+        <div class="descrizione-gioco">
+            <h4>Come si gioca?</h4>
+            <p><em>SIMON:</em> Un gioco di memoria digitale che mette alla prova le tue abilità di ricordare una sequenza di numeri. All’inizio del gioco, vengono generati e visualizzati 5 numeri casuali. Dopo 20 secondi, i numeri scompaiono e l’utente deve inserire i numeri che ricorda. Se l’utente indovina un numero, la casella diventa verde, altrimenti diventa rossa. L’obiettivo del gioco è ricordare e inserire correttamente tutti i numeri. Se l’utente indovina almeno 3 numeri, vince il gioco. Altrimenti, il gioco termina con un messaggio ‘Hai perso!’. Buon divertimento e buona fortuna!</p>
+        </div>
     </div>
+
+
 
 
     <!-- js -->
